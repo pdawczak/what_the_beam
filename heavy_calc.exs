@@ -23,6 +23,7 @@ collect =
   fn ref ->
     receive do
       {^ref, msg} -> msg
+      after 500 -> :nope
     end
   end
 
